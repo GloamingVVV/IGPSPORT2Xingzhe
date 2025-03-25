@@ -39,7 +39,7 @@ def syncData(username, password, garmin_email = None, garmin_password = None):
         garth.login(garmin_email, garmin_password)
         activities = garth.connectapi(
             f"/activitylist-service/activities/search/activities",
-            params={"activityType": "cycling", "limit": 10, "start": 0, 'excludeChildren': False},
+            params={"activityType": "cycling", "limit": 20, "start": 0, 'excludeChildren': False},
         )
     else:
         print("同步IGP数据")
